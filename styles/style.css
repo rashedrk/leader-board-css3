@@ -80,6 +80,55 @@ main{
 }
 
 /* Course section style */
+.courses{
+    display: flex;
+    gap: 23px;
+}
+.course{
+    width: 260px;
+    box-shadow: 0px 5.34229px 13.3557px rgba(0, 0, 0, 0.05);
+    padding: 12px;
+    border-radius: 10px;
+}
 .course-thumbnail{
     width: 224px;
+}
+.course-title{
+    color: #1E1E1E;
+    font-size: 20px;
+    font-weight: 500;
+}
+.course-author{
+    color: #ED6B4F;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+.course-info{
+    display: flex;
+    align-items: center;
+}
+.filled{
+    color: #FFC014;
+    font-size: 12px;
+}
+.empty{
+    color: hsla(0, 0%, 68%, 0.25);
+    font-size: 12px;
+}
+.rating{
+    margin-left: 10px;
+    color: #A2A2A2;
+    font-weight: 400;
+    font-size: 15px;
+}
+.duration{
+    width: 95px;
+    margin-left: 25px;
+    padding: 5px;
+    background-color: #FFE4E8;
+    border-radius: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: #FF4A60;
 }
