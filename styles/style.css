@@ -1,7 +1,11 @@
-/* fonts */
+/*---- 
+fonts 
+-----*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-/* common styles or utilities */
+/*------------------------ 
+common styles or utilities 
+--------------------------*/
 body{
     background-color:  #F3F1FF;
     font-family: 'Poppins', sans-serif;
@@ -19,7 +23,9 @@ main{
     margin-top: 21px;
 }
 
-/* top player styles */
+/*---------------- 
+top player styles 
+-----------------*/
 .section-title{
     font-weight: 500;
     font-size: 24px;
@@ -30,8 +36,6 @@ main{
 .players{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-   
-    
 }
 .player{
     display: flex;
@@ -49,7 +53,9 @@ main{
     font-weight: 500;
 }
 
-/* top blogs styles */
+/*--------------- 
+top blogs styles 
+----------------*/
 .blogs{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -60,6 +66,7 @@ main{
     display: flex;
     gap: 16px;
     align-items: center;
+    
 }
 .thumbnail img{
     width: 177px;
@@ -79,10 +86,14 @@ main{
     color: #562EFF;
 }
 
-/* Course section style */
+/* -------------------
+Course section style 
+---------------------*/
 .courses{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     gap: 23px;
+    
 }
 .course{
     width: 260px;
@@ -131,4 +142,35 @@ main{
     font-weight: 600;
     text-align: center;
     color: #FF4A60;
+}
+/*---------------------------
+Media Query for responsive 
+----------------------------*/
+/* Mobile devices */
+@media screen and (max-width: 668px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .player, .blog{
+        flex-direction: column;
+    }
+    .courses{
+        justify-items: center;
+    }
+    .blog{
+        text-align: center;
+    }
+}
+
+/* Tablet devices */
+@media screen and (min-width: 689px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(2,1fr);
+    }
 }
